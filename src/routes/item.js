@@ -23,5 +23,5 @@ const itemUpload = (0, multer_1.default)({ storage: itemStorage });
 router.get("/", item_1.getItems);
 router.get("/:id", item_1.getItem);
 router.post("/add", itemUpload.single("file"), item_1.addItem);
-router.delete("/delete/:id", item_1.deleteItem);
+router.delete("/:id", item_1.deleteItem);
 exports.default = router;
