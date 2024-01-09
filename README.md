@@ -8,7 +8,7 @@
 | /items/?category= | GET    | Get all items having that exact category                |
 | /items/:id        | GET    | Get info of specific item                               |
 | /items/add        | POST   | Add new item                                            |
-| /items/delete/:id | DELETE | To remove an item                                       |
+| /items/:id        | DELETE | To remove an item                                       |
 | /files            | GET    | To get list of all files stored                         |
 | /delete/:id       | DELETE | Delete file of name :id, Requires ADMIN_TOKEN in header |
 
