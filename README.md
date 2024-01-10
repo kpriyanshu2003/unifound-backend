@@ -1,4 +1,4 @@
-# Finding Nemo Backend
+# UniFound Backend
 
 ## API reference
 
@@ -14,15 +14,15 @@
 
 ## Form Data Submission
 
-file : to contain file
-studentName
-itemTitle
-itemDescription
-email
-location
-contact
-secret
-category: LOST | FOUND
+file: to contain image\
+studentName\
+itemTitle\
+itemDescription\
+email\
+location\
+contact\
+secret\
+category: LOST | FOUND\
 
 ## ENV VAR
 
@@ -30,3 +30,9 @@ category: LOST | FOUND
 2. MONDO_DB URL
 3. ADMIN_TOKEN
 4. NODE_VERSION ( for specific cases )
+
+Frontend Code : [UniFound Frontend](https://github.com/kpriyanshu2003/unifound-frontend)
+
+Made using Repo : [Finding Nemo](https://github.com/kpriyanshu2003/finding-nemo)
+
+Setup for yourself using Docker : [Unifound-Compose.yml](https://gist.github.com/kpriyanshu2003/8d11dd63b699a10edebdd62861c7d68e)
