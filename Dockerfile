@@ -3,8 +3,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-ENV ADMIN_TOKEN=admin0
+ENV ADMIN_TOKEN=your_random_string
 ENV PORT=3300
-ENV MONGO_URL=mongodb+srv://unifound:rRa0Ij0Dioi4z8hb@cluster0.ohfl2ma.mongodb.net/
+ENV MONGO_URL=your_mongodb_url
 EXPOSE 3300
 CMD ["npm", "start"]
