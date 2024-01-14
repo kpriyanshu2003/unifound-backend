@@ -8,7 +8,7 @@ const itemSchema = new mongoose.Schema(
     itemDescription: { type: String, required: true },
     email: { type: String, required: true },
     location: { type: String, required: true },
-    contact: { type: Number, required: true },
+    contact: { type: Number, required: false },
     secret: { type: String },
     category: {
       type: String,

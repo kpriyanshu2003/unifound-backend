@@ -13,11 +13,12 @@ const file_1 = __importDefault(require("./src/routes/file"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = Number(process.env.PORT) || 5000;
-app.use(express_1.default.json());
 app.use((0, cors_1.default)());
+app.use(express_1.default.json());
 app.use((0, morgan_1.default)("dev"));
 app.use("/items", item_1.default);
 app.use("/files", file_1.default);
+app.use("/images", express_1.default.static("./src/uploads"));
 app.use((err, req, res, next) => {
     const status = err.status || 500;
     const message = err.message || "Something went wrong";
