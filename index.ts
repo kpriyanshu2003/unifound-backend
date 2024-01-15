@@ -10,7 +10,14 @@ dotenv.config();
 const app = express();
 const PORT: number = Number(process.env.PORT) || 5000;
 
-app.use(cors());
+const corsConfig = {
+  credentials: true,
+  origin: "http://localhost:3000",
+  optionSuccessStatus: "200",
+};
+
+app.use(compression());
+app.use(cors(corsConfig));
 app.use(express.json());
 app.use(morgan("dev"));
 app.use("/items", itemRoute);
@@ -43,3 +50,6 @@ mongoose
     console.error("MongoDB connection error:", error.message);
     process.exit(1);
   });
+function compression(): any {
+  throw new Error("Function not implemented.");
+}
