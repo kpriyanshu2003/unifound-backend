@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import morgan from "morgan";
 import dotenv from "dotenv";
 import cors from "cors";
+import compress from "compression";
 import itemRoute from "./src/routes/item";
 import fileRoute from "./src/routes/file";
 
@@ -16,7 +17,7 @@ const corsConfig = {
   optionSuccessStatus: "200",
 };
 
-app.use(compression());
+app.use(compress());
 app.use(cors(corsConfig));
 app.use(express.json());
 app.use(morgan("dev"));

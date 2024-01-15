@@ -8,6 +8,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const morgan_1 = __importDefault(require("morgan"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
+const compression_1 = __importDefault(require("compression"));
 const item_1 = __importDefault(require("./src/routes/item"));
 const file_1 = __importDefault(require("./src/routes/file"));
 dotenv_1.default.config();
@@ -18,7 +19,7 @@ const corsConfig = {
     origin: "http://localhost:3000",
     optionSuccessStatus: "200",
 };
-app.use(compression());
+app.use((0, compression_1.default)());
 app.use((0, cors_1.default)(corsConfig));
 app.use(express_1.default.json());
 app.use((0, morgan_1.default)("dev"));
