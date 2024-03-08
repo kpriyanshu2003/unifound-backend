@@ -1,0 +1,51 @@
+section {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(0, 0, 0), rgb(234, 213, 184), rgb(0, 0, 0));
+  animation: animate1 5s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(100%, 100%);
+  }
+}
+
+section span {
+  position: relative;
+  display: block;
+  width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 1px);
+  background: #ffffff;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 700px) {
+  section span{
+    width: calc(16.25vw - 1px);
+    height: calc(16.25vw - 1px);
+  } 
+}
+
+@media only screen and (min-width: 701px) and (max-width: 880px) {
+  section span{
+    width: calc(16.5vw - 1px);
+    height: calc(16.5vw - 1px);
+  } 
+}
